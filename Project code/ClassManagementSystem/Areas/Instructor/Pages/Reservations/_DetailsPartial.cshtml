@@ -1,0 +1,30 @@
+@model ClassManagementSystem.Areas.Instructor.Pages.Reservations.IndexModel
+
+<div class="modal-header">
+    <h5 class="modal-title">Reservation Details</h5>
+</div>
+<div class="modal-body">
+    <dl class="row">
+        <dt class="col-sm-4">Date</dt>
+        <dd class="col-sm-8">
+            @(Model.DetailsItem.Date.HasValue ? Model.DetailsItem.Date.Value.ToShortDateString() : "")
+        </dd>
+
+        <dt class="col-sm-4">Start Time</dt>
+        <dd class="col-sm-8">@Model.DetailsItem.StartTime</dd>
+
+        <dt class="col-sm-4">End Time</dt>
+        <dd class="col-sm-8">@Model.DetailsItem.EndTime</dd>
+
+        <dt class="col-sm-4">Term</dt>
+        <dd class="col-sm-8">@Model.DetailsItem.Term?.Name</dd>
+
+        <dt class="col-sm-4">Classroom</dt>
+        <dd class="col-sm-8">@Model.DetailsItem.Classroom?.Name</dd>
+    </dl>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-primary" id="editReservationBtn" data-id="@Model.DetailsItem.Id">Edit</button>
+    <button type="button" class="btn btn-danger" id="deleteReservationBtn" data-id="@Model.DetailsItem.Id">Delete</button>
+</div>

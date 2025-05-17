@@ -1,0 +1,39 @@
+@model ClassManagementSystem.Areas.Instructor.Pages.Reservations.IndexModel
+
+<form method="post" asp-page-handler="Edit" id="editReservationForm">
+    <div class="modal-header">
+        <h5 class="modal-title">Edit Reservation</h5>
+    </div>
+    <div class="modal-body">
+        <input type="hidden" asp-for="Input.Id" />
+        <div class="mb-3">
+            <label asp-for="Input.Date" class="form-label"></label>
+            <input asp-for="Input.Date" class="form-control" type="date" />
+            <span asp-validation-for="Input.Date" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Input.StartTime" class="form-label"></label>
+            <input asp-for="Input.StartTime" class="form-control" type="time" />
+            <span asp-validation-for="Input.StartTime" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Input.EndTime" class="form-label"></label>
+            <input asp-for="Input.EndTime" class="form-control" type="time" />
+            <span asp-validation-for="Input.EndTime" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Input.TermId" class="form-label"></label>
+            <select asp-for="Input.TermId" asp-items="Model.Terms" class="form-select"></select>
+            <span asp-validation-for="Input.TermId" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Input.ClassroomId" class="form-label"></label>
+            <select asp-for="Input.ClassroomId" asp-items="Model.Classrooms" class="form-select"></select>
+            <span asp-validation-for="Input.ClassroomId" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+    </div>
+</form>

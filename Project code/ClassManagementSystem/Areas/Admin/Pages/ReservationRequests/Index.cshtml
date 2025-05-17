@@ -1,0 +1,198 @@
+@page
+@model ClassManagementSystem.Areas.Admin.Pages.ReservationRequests.IndexModel
+@{
+    ViewData["Title"] = "Reservation Requests";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<div class="mb-4">
+    <div id="mini-calendar"></div>
+</div>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-light">
+        <tr>
+            <th>Term</th>
+            <th>Instructor</th>
+            <th>Classroom</th>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    @if (!Model.Reservations.Any())
+    {
+        <tr>
+            <td colspan="7" class="text-center">No reservations found.</td>
+        </tr>
+    }
+    else
+    {
+        foreach (var v in Model.Reservations)
+        {
+            var r = v.Reservation;
+            <tr>
+                <td>@(r.Term?.Name ?? "-")</td>
+                <td>
+                    @(v.HasConflict ? "Conflicting" : r.InstructorName)
+                </td>
+                <td>@(r.Classroom?.Name ?? "-")</td>
+                <td>@(r.Date is DateTime dt ? dt.ToString("dddd") : "-")</td>
+                <td>
+                    @(r.StartTime is TimeSpan st && r.EndTime is TimeSpan et
+                        ? $"{st:hh\\:mm} – {et:hh\\:mm}"
+                        : "-")
+                </td>
+                <td>
+                    @* Conflict overrides holiday/status *@
+                    @if (v.HasConflict)
+                    {
+                        <span class="badge bg-warning text-dark">Conflict</span>
+                    }
+                    else if (v.IsHoliday)
+                    {
+                        <span class="badge bg-warning text-dark">Holiday</span>
+                    }
+                    else if (r.IsApproved == true)
+                    {
+                        <span class="badge bg-success">Approved</span>
+                    }
+                    else if (r.IsApproved == false)
+                    {
+                        <span class="badge bg-danger">Rejected</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-secondary">Pending</span>
+                    }
+                </td>
+                <td>
+                    <form method="post" class="d-inline">
+                        <input type="hidden" name="Id" value="@r.Id" />
+                        <button name="Action" value="approve"
+                                class="btn btn-sm btn-success"
+                                @(r.IsApproved == true || v.HasConflict ? "disabled" : "")>
+                            Approve
+                        </button>
+                    </form>
+                    <form method="post" class="d-inline">
+                        <input type="hidden" name="Id" value="@r.Id" />
+                        <button name="Action" value="reject"
+                                class="btn btn-sm btn-danger"
+                                @(r.IsApproved == false || v.HasConflict ? "disabled" : "")>
+                            Reject
+                        </button>
+                    </form>
+                    <form method="post" class="d-inline"
+                          onsubmit="return confirm('Are you sure you want to delete this reservation?');">
+                        <input type="hidden" name="Id" value="@r.Id" />
+                        <button name="Action" value="delete"
+                                class="btn btn-sm btn-outline-danger">
+                            Delete
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>
+
+@if (Model.TotalPages > 1)
+{
+    <nav>
+        <ul class="pagination">
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li class="page-item @(i == Model.PageNumber ? "active" : "")">
+                    <a class="page-link" asp-route-pageNumber="@i">@i</a>
+                </li>
+            }
+        </ul>
+    </nav>
+}
+
+@{
+    var holidayEvents = (Model.Holidays ?? new List<DateTime>())
+        .Select(date => new {
+            start = date.ToString("yyyy-MM-dd"),
+            end = date.ToString("yyyy-MM-dd"),
+            display = "background",
+            color = "#ff9800" // orange
+        }).ToList();
+    var holidayDates = (Model.Holidays ?? new List<DateTime>()).Select(d => d.Date).ToHashSet();
+    var reservationsOnHoliday = (Model.AllReservations ?? new List<ClassManagementSystem.Data.Models.Reservation>())
+        .Where(r => r.Date.HasValue && holidayDates.Contains(r.Date.Value.Date))
+        .ToList();
+    var hasHolidayConflicts = reservationsOnHoliday.Any();
+}
+
+@if (hasHolidayConflicts)
+{
+    <div class="alert alert-warning d-flex align-items-center"
+         role="alert"
+         style="cursor:pointer;"
+         data-bs-toggle="modal"
+         data-bs-target="#holidayConflictModal">
+        <i class="bi bi-bell-fill text-warning me-2" style="font-size: 1.5rem;"></i>
+        <span>
+            There are reservations scheduled on holidays. Click for details.
+        </span>
+    </div>
+}
+
+<div class="modal fade" id="holidayConflictModal" tabindex="-1" aria-labelledby="holidayConflictModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="holidayConflictModalLabel">Reservations on Holidays</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+          @foreach (var r in reservationsOnHoliday)
+          {
+              <li class="list-group-item">
+                  <strong>@(r.Date?.ToString("yyyy-MM-dd")):</strong>
+                  @r.InstructorName (@(r.Classroom?.Name ?? "-")) 
+                  @if (r.StartTime.HasValue && r.EndTime.HasValue)
+                  {
+                      <span>[@r.StartTime.Value.ToString(@"hh\:mm") – @r.EndTime.Value.ToString(@"hh\:mm")]</span>
+                  }
+              </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const holidayEvents = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(holidayEvents));
+            const reservations = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(
+                Model.AllReservations.Select(r => new {
+                    title = r.InstructorName + " (" + (r.Classroom?.Name ?? "-") + ")",
+                    start = r.Date?.ToString("yyyy-MM-dd") + "T" + r.StartTime,
+                    end = r.Date?.ToString("yyyy-MM-dd") + "T" + r.EndTime,
+                    color = r.IsApproved == true ? "green" : (r.IsApproved == false ? "red" : "gray")
+                })
+            ));
+
+            const calendar = new FullCalendar.Calendar(document.getElementById('mini-calendar'), {
+                initialView: 'dayGridMonth',
+                height: 350,
+                events: [...holidayEvents, ...reservations]
+            });
+            calendar.render();
+        });
+    </script>
+}

@@ -1,0 +1,215 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ClassManagementSystem
+build_property.RootNamespace = ClassManagementSystem
+build_property.ProjectDir = /Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Admin/Pages/Classrooms/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvQ2xhc3Nyb29tcy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Admin/Pages/Classrooms/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvQ2xhc3Nyb29tcy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Admin/Pages/Classrooms/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvQ2xhc3Nyb29tcy9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Admin/Pages/Classrooms/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvQ2xhc3Nyb29tcy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Admin/Pages/Classrooms/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvQ2xhc3Nyb29tcy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Admin/Pages/Feedback/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvRmVlZGJhY2svSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Admin/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Admin/Pages/Instructors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvSW5zdHJ1Y3RvcnMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Admin/Pages/Instructors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvSW5zdHJ1Y3RvcnMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Admin/Pages/Instructors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvSW5zdHJ1Y3RvcnMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Admin/Pages/Instructors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvSW5zdHJ1Y3RvcnMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Admin/Pages/ReservationRequests/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvUmVzZXJ2YXRpb25SZXF1ZXN0cy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Admin/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Admin/Pages/Terms/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvVGVybXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Admin/Pages/Terms/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvVGVybXMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Admin/Pages/Terms/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvVGVybXMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Admin/Pages/Terms/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvVGVybXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Admin/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Admin/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Mb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9fVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Instructor/Pages/Feedback/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSW5zdHJ1Y3Rvci9QYWdlcy9GZWVkYmFjay9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Instructor/Pages/Feedback/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSW5zdHJ1Y3Rvci9QYWdlcy9GZWVkYmFjay9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Instructor/Pages/Feedback/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSW5zdHJ1Y3Rvci9QYWdlcy9GZWVkYmFjay9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Instructor/Pages/Feedback/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSW5zdHJ1Y3Rvci9QYWdlcy9GZWVkYmFjay9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Instructor/Pages/Feedback/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSW5zdHJ1Y3Rvci9QYWdlcy9GZWVkYmFjay9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Instructor/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSW5zdHJ1Y3Rvci9QYWdlcy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Instructor/Pages/Reservations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSW5zdHJ1Y3Rvci9QYWdlcy9SZXNlcnZhdGlvbnMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Instructor/Pages/Reservations/_CreatePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSW5zdHJ1Y3Rvci9QYWdlcy9SZXNlcnZhdGlvbnMvX0NyZWF0ZVBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Instructor/Pages/Reservations/_DetailsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSW5zdHJ1Y3Rvci9QYWdlcy9SZXNlcnZhdGlvbnMvX0RldGFpbHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Instructor/Pages/Reservations/_EditPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSW5zdHJ1Y3Rvci9QYWdlcy9SZXNlcnZhdGlvbnMvX0VkaXRQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Instructor/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSW5zdHJ1Y3Rvci9QYWdlcy9TaGFyZWQvX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Instructor/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSW5zdHJ1Y3Rvci9QYWdlcy9fVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Areas/Instructor/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSW5zdHJ1Y3Rvci9QYWdlcy9fVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Pages/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/metehankaygisiz/Documents/Projects/CENG 382/Project code/ClassManagementSystem/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-y4iwmq4uoq

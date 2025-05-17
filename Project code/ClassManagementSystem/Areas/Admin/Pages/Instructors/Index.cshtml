@@ -1,0 +1,94 @@
+@page
+@model ClassManagementSystem.Areas.Admin.Pages.Instructors.IndexModel
+@{
+    ViewData["Title"] = "Manage Instructors and Admins";
+}
+
+<h1 class="mb-4">
+  <i class="bi bi-people-fill"></i> @ViewData["Title"]
+</h1>
+
+<div class="card shadow-sm">
+  <div class="card-body">
+
+    <div class="d-flex mb-3">
+      <a asp-page="Create" class="btn btn-primary ms-auto">
+        <i class="bi bi-plus-lg"></i> New Instructor or Admin
+      </a>
+    </div>
+
+    <!-- Instructors Section -->
+    <h5>Instructors</h5>
+    @if (!Model.Instructors.Any())
+    {
+      <div class="alert alert-info text-center">
+        No instructors have been created yet.
+      </div>
+    }
+    else
+    {
+      <table class="table table-bordered table-hover align-middle mb-4">
+        <thead class="table-light">
+          <tr>
+            <th>Email</th>
+            <th class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          @foreach (var u in Model.Instructors)
+          {
+            <tr>
+              <td>@u.Email</td>
+              <td class="text-center">
+                <a asp-page="Edit" asp-route-id="@u.Id" class="btn btn-sm btn-outline-primary me-1">
+                  <i class="bi bi-pencil-square"></i> Edit
+                </a>
+                <a asp-page="Delete" asp-route-id="@u.Id" class="btn btn-sm btn-outline-danger"
+                   onclick="return confirm('Are you sure you want to delete this instructor?');">
+                  <i class="bi bi-trash"></i> Delete
+                </a>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+
+    <!-- Admins Section -->
+    <h5>Admins</h5>
+    @if (!Model.Admins.Any())
+    {
+      <div class="alert alert-info text-center">
+        No admins have been created yet.
+      </div>
+    }
+    else
+    {
+      <table class="table table-bordered table-hover align-middle">
+        <thead class="table-light">
+          <tr>
+            <th>Email</th>
+            <th class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          @foreach (var u in Model.Admins)
+          {
+            <tr>
+              <td>@u.Email</td>
+              <td class="text-center">
+                <a asp-page="Edit" asp-route-id="@u.Id" class="btn btn-sm btn-outline-primary me-1">
+                  <i class="bi bi-pencil-square"></i> Edit
+                </a>
+                <a asp-page="Delete" asp-route-id="@u.Id" class="btn btn-sm btn-outline-danger"
+                   onclick="return confirm('Are you sure you want to delete this admin?');">
+                  <i class="bi bi-trash"></i> Delete
+                </a>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </div>
+</div>

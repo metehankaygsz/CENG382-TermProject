@@ -1,0 +1,99 @@
+@page "/Admin"
+@model ClassManagementSystem.Areas.Admin.Pages.IndexModel
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<style>
+    .dashboard-card {
+        transition: transform 0.12s, box-shadow 0.12s;
+    }
+    .dashboard-card:hover {
+        transform: translateY(-4px) scale(1.03);
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15)!important;
+        text-decoration: none;
+    }
+    .dashboard-link {
+        color: inherit;
+        text-decoration: none;
+    }
+    .dashboard-link:hover {
+        color: inherit;
+        text-decoration: none;
+    }
+</style>
+
+<h1 class="mb-4">@ViewData["Title"]</h1>
+
+<div class="row g-4 mb-4">
+    <div class="col-md-4">
+    <div class="card text-bg-secondary shadow-sm h-100 dashboard-card">
+        <div class="card-body text-center">
+            <i class="bi bi-person display-5 mb-2"></i>
+            <h6 class="card-title">Total Users</h6>
+            <div class="display-6 fw-bold">@Model.UserCount</div>
+        </div>
+    </div>
+</div>
+    <div class="col-md-4">
+        <div class="card text-bg-success shadow-sm h-100 dashboard-card">
+            <div class="card-body text-center">
+                <i class="bi bi-building display-5 mb-2"></i>
+                <h6 class="card-title">Classrooms</h6>
+                <div class="display-6 fw-bold">@Model.ClassroomCount</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-bg-info shadow-sm h-100 dashboard-card">
+            <div class="card-body text-center">
+                <i class="bi bi-chat-left-text display-5 mb-2"></i>
+                <h6 class="card-title">Feedback</h6>
+                <div class="display-6 fw-bold">@Model.FeedbackCount</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-3">
+        <a asp-page="/Terms/Index" asp-area="Admin" class="dashboard-link">
+            <div class="card text-bg-light h-100 shadow-sm dashboard-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-calendar3 display-4 mb-2 text-primary"></i>
+                    <h5 class="card-title">Terms</h5>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a asp-page="/Instructors/Index" asp-area="Admin" class="dashboard-link">
+            <div class="card text-bg-light h-100 shadow-sm dashboard-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-people display-4 mb-2 text-primary"></i>
+                    <h5 class="card-title">Instructors and Admins</h5>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a asp-page="/Classrooms/Index" asp-area="Admin" class="dashboard-link">
+            <div class="card text-bg-light h-100 shadow-sm dashboard-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-building display-4 mb-2 text-success"></i>
+                    <h5 class="card-title">Classrooms</h5>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a asp-page="/Feedback/Index" asp-area="Admin" class="dashboard-link">
+            <div class="card text-bg-light h-100 shadow-sm dashboard-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-chat-left-text display-4 mb-2 text-info"></i>
+                    <h5 class="card-title">Feedbacks</h5>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

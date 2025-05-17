@@ -1,0 +1,58 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<style>
+  /* Center the card vertically & horizontally */
+  .login-wrapper {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Optional: subtle page background */
+  body {
+    background: #f8f9fa;
+  }
+</style>
+
+<div class="login-wrapper">
+  <div class="card shadow-sm" style="max-width: 400px; width: 100%;">
+    <div class="card-body p-4">
+      <h2 class="card-title text-center mb-4">Log in</h2>
+      <form method="post">
+        <div asp-validation-summary="ModelOnly" class="alert alert-danger py-2" role="alert"></div>
+
+        <div class="form-floating mb-3">
+          <input asp-for="Input.Email"
+                 class="form-control"
+                 placeholder="name@example.com"
+                 autocomplete="username" />
+          <label asp-for="Input.Email">Email address</label>
+          <span asp-validation-for="Input.Email" class="text-danger small"></span>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input asp-for="Input.Password"
+                 type="password"
+                 class="form-control"
+                 placeholder="Password"
+                 autocomplete="current-password" />
+          <label asp-for="Input.Password">Password</label>
+          <span asp-validation-for="Input.Password" class="text-danger small"></span>
+        </div>
+
+        <div class="d-grid mb-3">
+          <button type="submit" class="btn btn-primary btn-lg">Log in</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+@section Scripts {
+  <partial name="_ValidationScriptsPartial" />
+}

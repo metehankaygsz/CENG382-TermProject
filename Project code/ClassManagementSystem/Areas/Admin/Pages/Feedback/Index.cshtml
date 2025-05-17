@@ -1,0 +1,62 @@
+@page
+@model ClassManagementSystem.Areas.Admin.Pages.Feedback.IndexModel
+@{
+    ViewData["Title"] = "All Feedbacks";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h2 class="card-title mb-4">@ViewData["Title"]</h2>
+
+            @if (!Model.FeedbackList.Any())
+            {
+                <div class="alert alert-info mb-0">No feedback entries yet.</div>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-striped align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Classroom</th>
+                                <th>Instructor</th>
+                                <th>Rating</th>
+                                <th>Comments</th>
+                                <th>Submitted On</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var f in Model.FeedbackList)
+                        {
+                            <tr>
+                                <td>@(f.Classroom?.Name ?? "-")</td>
+                                <td>@f.InstructorName</td>
+                                <td>
+                                    @for (int i = 0; i < (f.Rating ?? 0); i++)
+                                    {
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    }
+                                    @for (int i = (f.Rating ?? 0); i < 5; i++)
+                                    {
+                                        <i class="bi bi-star text-muted"></i>
+                                    }
+                                </td>
+                                <td>@(f.Comments ?? "-")</td>
+                                <td>@(f.SubmittedOn.HasValue ? f.SubmittedOn.Value.ToString("yyyy-MM-dd HH:mm") : "-")</td>
+                                <td>
+                                    <form method="post" class="d-inline"
+                                          onsubmit="return confirm('Delete this feedback?');">
+                                        <input type="hidden" asp-for="DeleteId" value="@f.Id" />
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+</div>

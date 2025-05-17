@@ -1,0 +1,57 @@
+@page
+@model ClassManagementSystem.Areas.Admin.Pages.Terms.EditModel
+@{
+    ViewData["Title"] = "Edit Term";
+}
+
+<h1 class="mb-4"><i class="bi bi-pencil-square"></i> @ViewData["Title"]</h1>
+
+<div class="card shadow-sm">
+  <div class="card-body">
+    <form method="post" class="row g-3">
+      <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+      <input asp-for="Term.Id" type="hidden" />
+
+      <div class="col-md-6">
+        <label asp-for="Term.Name" class="form-label">Name</label>
+        <input asp-for="Term.Name" class="form-control" />
+        <span asp-validation-for="Term.Name" class="text-danger"></span>
+      </div>
+
+      <div class="col-md-6">
+        <label asp-for="Term.StartDate" class="form-label">Start Date</label>
+        <input asp-for="Term.StartDate" type="date" class="form-control" />
+        <span asp-validation-for="Term.StartDate" class="text-danger"></span>
+      </div>
+
+      <div class="col-md-6">
+        <label asp-for="Term.EndDate" class="form-label">End Date</label>
+        <input asp-for="Term.EndDate" type="date" class="form-control" />
+        <span asp-validation-for="Term.EndDate" class="text-danger"></span>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-check mt-4">
+          <input asp-for="Term.IsActive" class="form-check-input" type="checkbox" id="IsActiveCheck" />
+          <label class="form-check-label" for="IsActiveCheck">
+            Active Term
+          </label>
+        </div>
+        <span asp-validation-for="Term.IsActive" class="text-danger"></span>
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">
+          <i class="bi bi-save"></i> Save Changes
+        </button>
+        <a asp-page="./Index" class="btn btn-secondary ms-2">
+          <i class="bi bi-arrow-left"></i> Back to List
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+
+@section Scripts {
+  @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
